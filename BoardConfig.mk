@@ -60,7 +60,10 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 BACKLIGHT_PATH := "/sys/class/leds/button-backlight/brightness"
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/lenovo/passion/cmhw/src
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    hardware/cyanogen/cmhw \
+    device/lenovo/passion/cmhw
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
