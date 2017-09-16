@@ -105,6 +105,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.usb.rc \
     init.qcom.rc \
+    init.qcom.power.rc \
     ueventd.qcom.rc
 
 # Keylayout
