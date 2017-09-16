@@ -206,10 +206,36 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch
 
+#add by lixh10 for vibrator intensity control 2015-3-16 start
+    chown system system /sys/class/timed_output/vibrator/pwm_duty_ns
+#add by lixh10 for vibrator intensity control 2015-3-16 end
+
 #begin lenovo add by wengjun1@lenovo.com
     chown system system /sys/board_properties/tpd_suspend_status
     chown system system /sys/board_properties/tpd_glove_status
 #end lenovo add by wengjun1@lenovo.com
+
+#begin lenovo add by houdz1@lenovo.com
+    chmod 0664 /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/button-backlight/brightness
+    chmod 0664 /sys/class/leds/test-led/brightness
+    chown system system /sys/class/leds/test-led/brightness
+    chmod 0664 /sys/class/leds/rgbled/brightness
+    chown system system /sys/class/leds/rgbled/brightness
+    chmod 0664 /sys/class/leds/rgbled/trigger
+    chown system system /sys/class/leds/rgbled/trigger
+    chmod 0664 /sys/bus/i2c/devices/6-0036/dimming_step_time
+    chown system system /sys/bus/i2c/devices/6-0036/dimming_step_time
+    chmod 0664 /sys/class/leds/rgbled/delay_off
+    chown system system /sys/class/leds/rgbled/delay_off
+    chmod 0664 /sys/class/leds/rgbled/delay_on
+    chown system system /sys/class/leds/rgbled/delay_on
+    restorecon /sys/class/leds/rgbled/delay_off
+    restorecon /sys/class/leds/rgbled/delay_on
+    restorecon /sys/class/leds/button-backlight/brightness
+    restorecon /sys/class/leds/test-led/brightness
+    restorecon /sys/class/leds/rgbled/brightness
+#end lenovo add by houdz1@lenovo.com
 
 #lenovo-sw caoyi1 add for sensor calibration 20151222 begin
     chmod 0664 /sys/devices/soc.0/78b6000.i2c/i2c-0/0-000e/fast_calibration_x
