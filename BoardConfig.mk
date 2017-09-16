@@ -31,7 +31,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := p1a42,passion_row,p1a41
+TARGET_OTA_ASSERT_DEVICE := p1a42,passion_row,p1a41,passion
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -44,7 +44,7 @@ USE_CUSTOM_AUDIO_POLICY := 1
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/p1a42/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/passion/bluetooth
 
 # Board
 TARGET_BOARD_PLATFORM := msm8916
@@ -60,7 +60,7 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 BACKLIGHT_PATH := "/sys/class/leds/button-backlight/brightness"
 
 # CMHW
-BOARD_HARDWARE_CLASS := device/lenovo/p1a42/cmhw/src
+BOARD_HARDWARE_CLASS := device/lenovo/passion/cmhw/src
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
@@ -82,8 +82,8 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_p1a42
-TARGET_RECOVERY_DEVICE_MODULES := libinit_p1a42
+TARGET_INIT_VENDOR_LIB := libinit_passion
+TARGET_RECOVERY_DEVICE_MODULES := libinit_passion
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Kernel
@@ -94,12 +94,12 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --tags_offset 0x00000100
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-TARGET_KERNEL_SOURCE := kernel/lenovo/p1a42
+TARGET_KERNEL_SOURCE := kernel/lenovo/passion
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
-TARGET_KERNEL_CONFIG := p1a42_defconfig
+TARGET_KERNEL_CONFIG := passion_defconfig
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
@@ -120,7 +120,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 26843545600
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 
 # Properties
-TARGET_SYSTEM_PROP += device/lenovo/p1a42/system.prop
+TARGET_SYSTEM_PROP += device/lenovo/passion/system.prop
 
 # Qualcomm support
 BOARD_USES_QC_TIME_SERVICES := true
@@ -134,14 +134,14 @@ endif
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/p1a42/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/lenovo/passion/rootdir/etc/fstab.qcom
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/lenovo/p1a42/sepolicy
+BOARD_SEPOLICY_DIRS += device/lenovo/passion/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
 # WiFi

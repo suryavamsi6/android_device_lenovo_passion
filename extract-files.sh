@@ -17,7 +17,7 @@
 #
 
 set -e
-export DEVICE=p1a42
+export DEVICE=passion
 export VENDOR=lenovo
 
 INITIAL_COPYRIGHT_YEAR=2016

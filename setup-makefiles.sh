@@ -36,7 +36,7 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" "true"
 
 # Copyright headers and guards
-write_headers "p1a42"
+write_headers "passion"
 
 # The standard device blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
