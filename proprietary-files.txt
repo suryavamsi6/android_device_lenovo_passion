@@ -356,6 +356,7 @@ vendor/firmware/BCM20795A2_001.003.025.0005.0051_Customers_China_NCD_Unsigned_co
 etc/libnfc-brcm.conf
 etc/libnfc-brcm-20795a20.conf
 etc/nfcee_access.xml
+lib64/hw/nfc_nci.bcm2079x.default.so
 
 # Perf
 vendor/bin/perfd
