@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter p1a42,$(TARGET_DEVICE)),)
+ifneq ($(filter passion,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 

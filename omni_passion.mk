@@ -17,6 +17,6 @@
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-$(call inherit-product, device/lenovo/p1a42/full_p1a42.mk)
+$(call inherit-product, device/lenovo/passion/full_passion.mk)
 
-PRODUCT_NAME := omni_p1a42
+PRODUCT_NAME := omni_passion
