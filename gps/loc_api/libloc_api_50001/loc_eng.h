@@ -1,4 +1,4 @@
-/* Copyright (c) 2009-2014, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2009-2014, 2016 The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -90,12 +90,14 @@ typedef struct loc_eng_data_s
     loc_sv_status_cb_ext           sv_status_cb;
     agps_status_extended           agps_status_cb;
     gps_nmea_callback              nmea_cb;
-    gps_ni_notify_callback         ni_notify_cb;
+    loc_ni_notify_callback         ni_notify_cb;
     gps_set_capabilities           set_capabilities_cb;
     gps_acquire_wakelock           acquire_wakelock_cb;
     gps_release_wakelock           release_wakelock_cb;
     gps_request_utc_time           request_utc_time_cb;
-    gps_measurement_callback       gps_measurement_cb;
+    gnss_set_system_info           set_system_info_cb;
+    gnss_sv_status_callback        gnss_sv_status_cb;
+    gnss_measurement_callback      gnss_measurement_cb;
     boolean                        intermediateFix;
     AGpsStatusValue                agps_status;
     loc_eng_xtra_data_s_type       xtra_module_data;
@@ -104,7 +106,6 @@ typedef struct loc_eng_data_s
     // AGPS state machines
     AgpsStateMachine*              agnss_nif;
     AgpsStateMachine*              internet_nif;
-    AgpsStateMachine*              wifi_nif;
     //State machine for Data Services
     AgpsStateMachine*              ds_nif;
 
@@ -120,7 +121,8 @@ typedef struct loc_eng_data_s
 
     // For nmea generation
     boolean generateNmea;
-    uint32_t sv_used_mask;
+    uint32_t gps_used_mask;
+    uint32_t glo_used_mask;
     float hdop;
     float pdop;
     float vdop;
@@ -139,6 +141,7 @@ typedef struct loc_eng_data_s
     loc_ext_parser location_ext_parser;
     loc_ext_parser sv_ext_parser;
 } loc_eng_data_s_type;
+
 
 //loc_eng functions
 int  loc_eng_init(loc_eng_data_s_type &loc_eng_data,
