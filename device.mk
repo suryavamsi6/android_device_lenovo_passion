@@ -93,6 +93,18 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Gps
+PRODUCT_PACKAGES += \
+    gps.msm8916
+
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    xtwifi.conf \
+    sap.conf
+
 # Gello
 PRODUCT_PACKAGES += \
     Gello
