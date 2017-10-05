@@ -223,10 +223,6 @@ vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
-etc/permissions/com.qualcomm.location.xml
-etc/permissions/com.qti.location.sdk.xml
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|97801b40c8095cf631c0c4fc302f728548545b5b
--framework/com.qti.location.sdk.jar|0fb1746edefdd0bb310529787f577da0c05cd69d
 
 # Graphics
 vendor/lib/egl/libEGL_adreno.so
