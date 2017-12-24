@@ -123,7 +123,6 @@ set_speaker_light_locked(struct light_device_t* dev,
     int blink;
     int onMS, offMS;
     unsigned int colorRGB;
-    int red, blue;
 
     if(!dev) {
         return -1;
@@ -156,9 +155,7 @@ set_speaker_light_locked(struct light_device_t* dev,
     if (blink) {
         write_int(RGB_BLINK_FILE, rgb);
     } else {
-        red = (colorRGB >> 16) & 0xFF;
-        blue = ((colorRGB & 0xFF) << 8) & 0xFF00;
-        write_int(RGB_LED_FILE, (blue+red));
+        write_int(RGB_LED_FILE, rgb);
     }
 
     return 0;
